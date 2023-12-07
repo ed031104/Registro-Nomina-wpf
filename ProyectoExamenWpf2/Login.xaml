@@ -1,0 +1,97 @@
+﻿<Window x:Class="ProyectoExamenWpf2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoExamenWpf2"
+        mc:Ignorable="d"
+        Title="Login" Height="537" Width="500"  ResizeMode="NoResize" Opacity="0.9" WindowStartupLocation="CenterScreen" Icon="/3d-fluency-fund-accounting.png">
+
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                        <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                        <RotateTransform Angle="1254.806" CenterX="0.5" CenterY="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="#E28EC5FC"/>
+                <GradientStop Color="#7FE0C3FC" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <!--PANEL PRINCIPAL-->
+        <materialDesign:Card Margin="50,20,50,40" Grid.ColumnSpan="2">
+
+            <Grid Margin="0,0,0,394" >
+
+                <!--PANEL SUPERIOR-->
+                <StackPanel Orientation="Horizontal" Margin="20,10,20,10">
+
+                    <!--ICONOS Y TEXTO PRINCIPAL-->
+                    <materialDesign:PackIcon Kind="User" HorizontalAlignment="Center" Height="30" Width="30" VerticalAlignment="Center" />
+                    <TextBlock Text="Login" Width="81" Height="21" Margin="4 0 0 0" FontSize="14"/>
+
+                </StackPanel>
+
+
+                <!--CAJAS DE TEXTOS-->
+                <StackPanel Margin="0,95,0,-107">
+                    <TextBox  Background="GhostWhite"  Foreground="Black" materialDesign:HintAssist.Hint="Nombre de usuario:"
+                         AcceptsReturn="True"
+                         IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                         TextWrapping="Wrap" x:Name="UsuarioTxt" Width="358" Height="55"/>
+                </StackPanel>
+
+                <StackPanel Margin="0,205,0,-211">
+                    <PasswordBox
+                        Background="GhostWhite"
+                        materialDesign:HintAssist.Hint="Password"
+                        IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledPasswordBoxEnabledComboBox}"
+                        Style="{StaticResource MaterialDesignFilledPasswordBox}" Width="360" Height="55" />
+                </StackPanel>
+
+
+                <!--BOTON REGISTRAR USUARIO-->
+                <StackPanel Margin="0,299,0,-283" RenderTransformOrigin="0.5,0.5">
+                    <StackPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </StackPanel.RenderTransform>
+                    <Button x:Name="registrarBtn" Content="¿No tienes una cuenta?, registrate"  FontSize="10" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#320b86" Height="43" Width="220" Click="registrarBtn_Click"/>
+                </StackPanel>
+
+                <!--BOTON INICIAR SECCION-->
+                <Grid Margin="20,383,20,-374">
+                    <Button
+                        Margin="0"
+                        Name="iniciarSeccionBtn"
+                        materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                        materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                        materialDesign:ButtonProgressAssist.Value="-1"
+                        Content="INICIAR SECCIÓN"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                        Style="{StaticResource MaterialDesignRaisedButton}" Click="iniciarSeccionBtn_Click" />
+                </Grid>
+
+            </Grid>
+
+
+
+
+        </materialDesign:Card>
+    </Grid>
+</Window>
