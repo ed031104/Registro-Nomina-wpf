@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoExamenWpf2.Logica;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,15 +16,17 @@ using System.Windows.Shapes;
 
 namespace ProyectoExamenWpf2
 {
-    /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+
+        ListaUsuarios listaUsuarios;
         public MainWindow()
         {
             InitializeComponent();
+            listaUsuarios = new ListaUsuarios();
         }
+        
+        public ListaUsuarios ListaUsuarios { get { return listaUsuarios;} }
 
         private void Grid_Selected(object sender, RoutedEventArgs e)
         {
@@ -32,7 +35,7 @@ namespace ProyectoExamenWpf2
 
         private void registrarBtn_Click(object sender, RoutedEventArgs e)
         {
-            Resgistro registro = new Resgistro();
+            Resgistro registro = new Resgistro(listaUsuarios);
             this.Hide();
             registro.ShowDialog();
             this.Show();
@@ -40,10 +43,20 @@ namespace ProyectoExamenWpf2
 
         private void iniciarSeccionBtn_Click(object sender, RoutedEventArgs e)
         {
-            Menu menu = new Menu();
-            this.Hide();
-            menu.ShowDialog();
-            this.Show();
+            String nombreUser = UsuarioTxt.Text;
+
+            Login loguearUser = new Login(listaUsuarios);
+
+            if (loguearUser.logearUsuario(nombreUser) == true)
+            {
+                Menu menu = new Menu();
+                this.Hide();
+                menu.ShowDialog();
+                this.Show();
+            }
+
+            
+            
         }
     }
 }

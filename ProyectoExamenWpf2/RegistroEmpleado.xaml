@@ -33,14 +33,14 @@
                 <StackPanel Orientation="Horizontal" Margin="20,10,20,10">
 
                     <!--ICONOS Y TEXTO PRINCIPAL-->
-                    <materialDesign:PackIcon Kind="User" HorizontalAlignment="Center" Height="30" Width="30" VerticalAlignment="Center" />
+                    <materialDesign:PackIcon Kind="UserAdd" HorizontalAlignment="Center" Height="30" Width="30" VerticalAlignment="Center" />
                     <TextBlock Text="Registro de Empleados" Width="142" Height="21" Margin="4 0 0 0" FontSize="14"/>
 
                 </StackPanel>
 
 
                 <!--CAJAS DE TEXTOS-->
-                <StackPanel Margin="20,95,20,-255"  >
+                <StackPanel Margin="20,72,20,-310"  >
 
                     <StackPanel Orientation="Horizontal" Height="52" >
 
@@ -51,15 +51,24 @@
                   AcceptsReturn="True"
                   IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
                  Style="{StaticResource MaterialDesignFilledTextBox}"
-                  TextWrapping="Wrap" x:Name="UsuarioTxt" Width="268" Height="35" />
+                  TextWrapping="Wrap" x:Name="nombresTxt" Width="268" Height="44" />
 
                         <TextBox  Background="GhostWhite"  Foreground="Black" materialDesign:HintAssist.Hint="Teléfono:"
                   Padding="0"
-                  Margin="100 0 0 0"         
+                  Margin="20 0 0 0"         
                   AcceptsReturn="True"
                   IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
                  Style="{StaticResource MaterialDesignFilledTextBox}"
-                  TextWrapping="Wrap" x:Name="Identificacion" Width="284" Height="35" VerticalAlignment="Center" RenderTransformOrigin="0.496,0.529"/>
+                  TextWrapping="Wrap" x:Name="telefonoTxt" Width="284" Height="44" VerticalAlignment="Center" RenderTransformOrigin="0.496,0.529"/>
+
+                        <TextBox  Background="GhostWhite"  Foreground="Black" materialDesign:HintAssist.Hint="Salario Mensual:"
+                    Padding="0"
+                    Margin="20 0 0 0"         
+                    AcceptsReturn="True"
+                    IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    TextWrapping="Wrap" x:Name="SalarioTxt" Width="284" Height="44" VerticalAlignment="Center" RenderTransformOrigin="0.496,0.529"/>    
+
                     </StackPanel>
 
 
@@ -72,53 +81,88 @@
                   AcceptsReturn="True"
                   IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
                  Style="{StaticResource MaterialDesignFilledTextBox}"
-                  TextWrapping="Wrap" x:Name="Apellidos" Width="268" Height="35" />
+                  TextWrapping="Wrap" x:Name="ApellidosTxt" Width="268" Height="44" />
 
                         <TextBox  Background="GhostWhite"  Foreground="Black" materialDesign:HintAssist.Hint="Email:"
                   Padding="0"
-                  Margin="100 0 0 0"         
+                  Margin="20 0 0 0"         
                   AcceptsReturn="True"
                   IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
                  Style="{StaticResource MaterialDesignFilledTextBox}"
-                  TextWrapping="Wrap" x:Name="email" Width="284" Height="35" VerticalAlignment="Center" RenderTransformOrigin="0.496,0.529"/>
+                  TextWrapping="Wrap" x:Name="emailTxt" Width="284" Height="44" VerticalAlignment="Center" RenderTransformOrigin="0.496,0.529"/>
+
+                        <ComboBox
+                            Name="SexoTxt"
+                            Margin="20 0 0 0"
+                            Width="284"
+                            materialDesign:HintAssist.Hint="Sexo:"
+                            Style="{StaticResource MaterialDesignFilledComboBox}" Height="44">
+                            <ComboBoxItem
+                                Content="Hombre" />
+                            <ComboBoxItem
+                                Content="Mujer" />
+                        </ComboBox>
+
                     </StackPanel>
+                    
+                    
 
                     <StackPanel Orientation="Horizontal" Height="52" Margin="0 25 0 0">
 
-                        <PasswordBox
-                          Margin="0 0 0 0 "
-                         Background="GhostWhite"
-                          Padding="0"
-                          Width="268"
-                         materialDesign:HintAssist.Hint="Password"
-                         IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledPasswordBoxEnabledComboBox}"
-                         Style="{StaticResource MaterialDesignFilledPasswordBox}" HorizontalAlignment="Left" VerticalAlignment="Center" Height="35" />
-
                         <DatePicker
+                            Name="fechaNacimientoTxt"
                          Background="GhostWhite"
-                          Margin="100 0 0 0"
+                          Margin="0"
                           materialDesign:HintAssist.Hint="Fecha de Nacimiento"
-                          Style="{StaticResource MaterialDesignFilledDatePicker}" Width="287" Height="35" FontSize="8" />
+                          Style="{StaticResource MaterialDesignFilledDatePicker}" Width="268" Height="44"  />
+
+                        <TextBox  Background="GhostWhite"  Foreground="Black" materialDesign:HintAssist.Hint="Número de Cédula:"
+                            Padding="0"
+                            Margin="20 0 0 0"         
+                            AcceptsReturn="True"
+                            IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
+                            Style="{StaticResource MaterialDesignFilledTextBox}"
+                            TextWrapping="Wrap" x:Name="cedulaTxt" Width="284" Height="44" VerticalAlignment="Center" RenderTransformOrigin="0.496,0.529"/> 
+                        
+                        <TextBox  Background="GhostWhite"  Foreground="Black" materialDesign:HintAssist.Hint="Número INSS:"
+                            Padding="0"
+                            Margin="20 0 0 0"         
+                            AcceptsReturn="True"
+                            IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
+                            Style="{StaticResource MaterialDesignFilledTextBox}"
+                            TextWrapping="Wrap" x:Name="inssTxt" Width="284" Height="44" VerticalAlignment="Center" RenderTransformOrigin="0.496,0.529"/>
 
                     </StackPanel>
 
-                </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="52" Margin="0 25 0 0">
+                        <ComboBox x:Name="cargoTxt"
+                             Margin="0"
+                            
+                            materialDesign:HintAssist.Hint="Puesto Laboral:"
+                            Style="{StaticResource MaterialDesignFilledComboBox}" Height="44" Width="877">
+                            <ComboBoxItem
+                                Content="Ingeniero" />
+                            <ComboBoxItem
+                                Content="Supervisor" />
+                            <ComboBoxItem
+                                Content="Gerente" />
+                        </ComboBox>
+                    </StackPanel>
+
+
+                    </StackPanel>
 
 
                 <!--BOTON REGISTRAR USUARIO-->
 
                 <!--BOTON INICIAR SECCION-->
-                <Grid Margin="20,342,20,-351">
+                <Grid Margin="20,363,20,-372">
                    
                     <Button
                  Margin="0"
                  Name="RegistrarseBtn"
-                 materialDesign:ButtonProgressAssist.IsIndeterminate="True"
-                 materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
-                 materialDesign:ButtonProgressAssist.Value="-1"
-                 Content="REGISTRARSE"
-                 IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                 Style="{StaticResource MaterialDesignRaisedButton}"  />
+                Content="Registrar"
+                        />
                 
                 </Grid>
 

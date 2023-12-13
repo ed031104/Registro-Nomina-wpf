@@ -28,13 +28,13 @@
                         </ListViewItem>
                             
                         <ListViewItem HorizontalAlignment="Center" Margin="0 ">
-                                <Button Background="{x:Null}" BorderBrush="{x:Null}" Name="EmpleadoDatosBtn" Style="{StaticResource MaterialDesignFloatingActionButton}">
+                                <Button Background="{x:Null}" BorderBrush="{x:Null}" Name="EmpleadoDatosBtn" Style="{StaticResource MaterialDesignFloatingActionButton}" Click="EmpleadoDatosBtn_Click">
                                     <materialDesign:PackIcon Kind="AccountCash" Foreground="Black" Height="30" Width="30"/>
                                 </Button>
                         </ListViewItem>
                             
                         <ListViewItem HorizontalAlignment="Center" Margin="0 ">
-                                <Button Background="{x:Null}" BorderBrush="{x:Null}" Name="NominaBtn" Style="{StaticResource MaterialDesignFloatingActionButton}" >
+                                <Button Background="{x:Null}" BorderBrush="{x:Null}" Name="NominaBtn" Style="{StaticResource MaterialDesignFloatingActionButton}" Click="NominaBtn_Click" >
                                     <materialDesign:PackIcon Kind="Cash" Foreground="Black" Height="30" Width="30"/>
                                 </Button>
                         </ListViewItem>

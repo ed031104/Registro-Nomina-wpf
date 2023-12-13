@@ -52,7 +52,7 @@
                      AcceptsReturn="True"
                      IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
                     Style="{StaticResource MaterialDesignFilledTextBox}"
-                     TextWrapping="Wrap" x:Name="UsuarioTxt" Width="268" Height="35" TextChanged="UsuarioTxt_TextChanged"/>
+                     TextWrapping="Wrap" x:Name="NombreUsuarioTxt" Width="268" Height="35" TextChanged="UsuarioTxt_TextChanged"/>
 
                         <TextBox  Background="GhostWhite"  Foreground="Black" materialDesign:HintAssist.Hint="Teléfono:"
                      Padding="0"
@@ -60,7 +60,7 @@
                      AcceptsReturn="True"
                      IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
                     Style="{StaticResource MaterialDesignFilledTextBox}"
-                     TextWrapping="Wrap" x:Name="Identificacion" Width="284" Height="35" VerticalAlignment="Center" RenderTransformOrigin="0.496,0.529"/>
+                     TextWrapping="Wrap" x:Name="telefonoTxt" Width="284" Height="35" VerticalAlignment="Center" RenderTransformOrigin="0.496,0.529"/>
                     </StackPanel>
                     
                     
@@ -72,7 +72,7 @@
                      AcceptsReturn="True"
                      IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
                     Style="{StaticResource MaterialDesignFilledTextBox}"
-                     TextWrapping="Wrap" x:Name="Apellidos" Width="268" Height="35" TextChanged="UsuarioTxt_TextChanged"/>
+                     TextWrapping="Wrap" x:Name="ApellidosTxt" Width="268" Height="35" TextChanged="UsuarioTxt_TextChanged"/>
 
                         <TextBox  Background="GhostWhite"  Foreground="Black" materialDesign:HintAssist.Hint="Email:"
                      Padding="0"
@@ -80,12 +80,12 @@
                      AcceptsReturn="True"
                      IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
                     Style="{StaticResource MaterialDesignFilledTextBox}"
-                     TextWrapping="Wrap" x:Name="email" Width="284" Height="35" VerticalAlignment="Center" RenderTransformOrigin="0.496,0.529"/>
+                     TextWrapping="Wrap" x:Name="emailTxt" Width="284" Height="35" VerticalAlignment="Center" RenderTransformOrigin="0.496,0.529"/>
                     </StackPanel>
                     
                     <StackPanel Orientation="Horizontal" Height="52" Margin="0 25 0 0">
 
-                        <PasswordBox
+                        <PasswordBox x:Name="contraseñaTxt"
                              Margin="0 0 0 0 "
                             Background="GhostWhite"
                              Padding="0"
@@ -94,7 +94,7 @@
                             IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledPasswordBoxEnabledComboBox}"
                             Style="{StaticResource MaterialDesignFilledPasswordBox}" HorizontalAlignment="Left" VerticalAlignment="Center" Height="35" />
 
-                        <DatePicker
+                        <DatePicker x:Name="fechaNacimientoTxt"
                             Background="GhostWhite"
                              Margin="100 0 0 0"
                              materialDesign:HintAssist.Hint="Fecha de Nacimiento"

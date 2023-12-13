@@ -1,0 +1,77 @@
+﻿<Page x:Class="ProyectoExamenWpf2.Nomina"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:ProyectoExamenWpf2"
+      mc:Ignorable="d" 
+      Title="Nomina" Height="426" Width="936">
+
+    <Grid>
+       
+
+        <!--PANEL PRINCIPAL-->
+        <materialDesign:Card >
+
+            <Grid Margin="0,0,0,378" >
+
+                <!--PANEL SUPERIOR-->
+                <StackPanel Orientation="Horizontal" Margin="20,10,20,10">
+
+                    <!--ICONOS Y TEXTO PRINCIPAL-->
+                    <materialDesign:PackIcon Kind="AccountCash" HorizontalAlignment="Center" Height="30" Width="30" VerticalAlignment="Center" />
+                    <TextBlock Text="Registro de Datos para Elaborar Nóminas" Width="274" Height="20" Margin="4 0 0 0" FontSize="14"/>
+
+                </StackPanel>
+
+
+
+
+                <StackPanel Margin="20,72,20,-335"  >
+                        
+                 
+                        
+                        <DataGrid x:Name="tabla" Width="859" d:ItemsSource="{d:SampleData ItemCount=19}" HeadersVisibility="Column" GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="#FFB7B2B2" VerticalGridLinesBrush="#00000000" Height="232"  VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" AutoGenerateColumns="True" materialDesign:ScrollViewerAssist.SupportHorizontalScroll="True" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                      
+                            
+                            <DataGrid.Columns >
+                                
+                                <DataGridTextColumn Header="Número INSS" Binding="{Binding Propiedad1}" />
+                                <DataGridTextColumn Header="Nombre" Binding="{Binding Propiedad2}" />
+                                <DataGridTextColumn Header="Cargo" Binding="{Binding Propiedad3}" />
+                                <DataGridTextColumn Header="Sueldo Mensual" Binding="{Binding Propiedad4}" />
+                                <DataGridTextColumn Header="Horas Extras" Binding="{Binding Propiedad5}" />
+                                <DataGridTextColumn Header="Pago de Horas Extras" Binding="{Binding Propiedad6}" />
+                                <DataGridTextColumn Header="Años de Antiguedad" Binding="{Binding Propiedad7}" />
+                                <DataGridTextColumn Header="Pago por Antiguedad" Binding="{Binding Propiedad8}" />
+                                <DataGridTextColumn Header="Bono" Binding="{Binding Propiedad9}" />
+                                <DataGridTextColumn Header="Salario Bruto" Binding="{Binding Propiedad10}" />
+                                <DataGridTextColumn Header="INSS Laboral" Binding="{Binding Propiedad11}" />
+                                <DataGridTextColumn Header="IR" Binding="{Binding Propiedad12}" />
+                                <DataGridTextColumn Header="Prestamos" Binding="{Binding Propiedad13}" />
+                                <DataGridTextColumn Header="Total de Deducciones" Binding="{Binding Propiedad14}" />
+                                <DataGridTextColumn Header="Neto a Recibir" Binding="{Binding Propiedad15}" />
+                                <DataGridTextColumn Header="INSS Patronal" Binding="{Binding Propiedad16}" />
+                                <DataGridTextColumn Header="INATEC" Binding="{Binding Propiedad17}" />
+                                <DataGridTextColumn Header="Aguinaldo" Binding="{Binding Propiedad18}" />
+                                <DataGridTextColumn Header="Vacaciones" Binding="{Binding Propiedad19}" />
+
+                                <materialDesign:DataGridTextColumn/>
+                            <materialDesign:DataGridComboBoxColumn/>
+                        </DataGrid.Columns>
+                            
+                        
+                    </DataGrid>
+                    
+                
+
+                </StackPanel>
+
+
+
+
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</Page>

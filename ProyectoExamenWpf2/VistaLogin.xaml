@@ -53,7 +53,7 @@
                 </StackPanel>
 
                 <StackPanel Margin="0,205,0,-211">
-                    <PasswordBox
+                    <PasswordBox x:Name="ContraseñaTxt"
                         Background="GhostWhite"
                         materialDesign:HintAssist.Hint="Password"
                         IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledPasswordBoxEnabledComboBox}"

@@ -48,6 +48,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -57,25 +59,40 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Logica\DatosEmpleado.cs" />
+    <Compile Include="Logica\Empleados.cs" />
+    <Compile Include="Logica\ListaUsuarios.cs" />
+    <Compile Include="Logica\Login.cs" />
+    <Compile Include="Logica\Nomina.cs" />
+    <Compile Include="Logica\Persona.cs" />
+    <Compile Include="Logica\Usuarios.cs" />
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Nomina.xaml.cs">
+      <DependentUpon>Nomina.xaml</DependentUpon>
     </Compile>
     <Compile Include="RegistroEmpleado.xaml.cs">
       <DependentUpon>RegistroEmpleado.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RegistroNomina.xaml.cs">
+      <DependentUpon>RegistroNomina.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resgistro.xaml.cs">
       <DependentUpon>Resgistro.xaml</DependentUpon>
     </Compile>
-    <Page Include="Login.xaml">
+    <Page Include="VistaLogin.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -83,15 +100,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Login.xaml.cs">
-      <DependentUpon>Login.xaml</DependentUpon>
+    <Compile Include="VistaLogin.xaml.cs">
+      <DependentUpon>VistaLogin.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Nomina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RegistroEmpleado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegistroNomina.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

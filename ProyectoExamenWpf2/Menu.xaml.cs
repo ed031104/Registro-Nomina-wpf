@@ -30,5 +30,17 @@ namespace ProyectoExamenWpf2
             RegistroEmpleado registro = new RegistroEmpleado();
             miFrame.Navigate(registro);
         }
+
+        private void EmpleadoDatosBtn_Click(object sender, RoutedEventArgs e)
+        {
+            RegistroNomina registroNomina = new RegistroNomina();
+            miFrame.Navigate(registroNomina);
+        }
+
+        private void NominaBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Nomina nomina = new Nomina();
+            miFrame.Navigate(nomina);
+        }
     }
 }
