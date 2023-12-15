@@ -161,7 +161,7 @@
                     <Button
                  Margin="0"
                  Name="RegistrarseBtn"
-                Content="Registrar"
+                Content="Registrar" Click="RegistrarseBtn_Click"
                         />
                 
                 </Grid>

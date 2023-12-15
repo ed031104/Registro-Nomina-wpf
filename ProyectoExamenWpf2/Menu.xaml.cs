@@ -20,6 +20,9 @@ namespace ProyectoExamenWpf2
     /// </summary>
     public partial class Menu : Window
     {
+        
+        RegistroNomina registroNomina = new RegistroNomina();
+
         public Menu()
         {
             InitializeComponent();
@@ -27,13 +30,13 @@ namespace ProyectoExamenWpf2
 
         private void EmpleadoBtn_Click(object sender, RoutedEventArgs e)
         {
-            RegistroEmpleado registro = new RegistroEmpleado();
-            miFrame.Navigate(registro);
+
+            RegistroEmpleado registroEmpleado = new RegistroEmpleado(registroNomina);
+            miFrame.Navigate(registroEmpleado);
         }
 
         private void EmpleadoDatosBtn_Click(object sender, RoutedEventArgs e)
         {
-            RegistroNomina registroNomina = new RegistroNomina();
             miFrame.Navigate(registroNomina);
         }
 

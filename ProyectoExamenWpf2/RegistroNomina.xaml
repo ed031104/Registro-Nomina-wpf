@@ -49,7 +49,7 @@
                             Margin="0 0 0 0"
                             Width="284"
                             materialDesign:HintAssist.Hint="Empleado:"
-                            Style="{StaticResource MaterialDesignFilledComboBox}" Height="44">
+                            Style="{StaticResource MaterialDesignFilledComboBox}" Height="44" AutomationProperties.ItemType="Empleados">
                             <ComboBoxItem
                                 Content="Hombre" />
                             <ComboBoxItem

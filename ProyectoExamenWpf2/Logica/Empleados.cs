@@ -13,7 +13,8 @@ namespace ProyectoExamenWpf2.Logica
         int numeroInss;
         double salarioMensual;
 
-        public Empleados(string nombre, string email, string telefono, string apellidos, string fechaNacimiento, String sexo, String numeroCedula, String cargo, int numeroInss, double salarioMensual) : base(nombre, email, telefono, apellidos, fechaNacimiento)
+        public Empleados(string nombre, string email, string telefono, string apellidos, string fechaNacimiento, String sexo, 
+            String numeroCedula, String cargo, int numeroInss, double salarioMensual) : base(nombre, email, telefono, apellidos, fechaNacimiento)
         {
             this.sexo = sexo;
             this.numeroCedula = numeroCedula;
@@ -28,7 +29,10 @@ namespace ProyectoExamenWpf2.Logica
         public int NumeroInss { get { return numeroInss; } set { numeroInss= value; } }
         public double SalarioMensual { get { return salarioMensual; } set { salarioMensual= value; } }
 
-
+        public override string ToString()
+        {
+            return $"Nombre: {Nombre}";
+        }
 
 
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoExamenWpf2.Logica
 {
-    internal class Nomina
+    public class Nomina
     {
     }
 }

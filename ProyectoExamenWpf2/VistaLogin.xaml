@@ -29,7 +29,7 @@
         </Grid.Background>
 
         <!--PANEL PRINCIPAL-->
-        <materialDesign:Card Margin="50,20,50,40" Grid.ColumnSpan="2">
+        <materialDesign:Card Margin="50,20,50,40" Grid.ColumnSpan="2"  materialDesign:ElevationAssist.Elevation="Dp16">
 
             <Grid Margin="0,0,0,394" >
 

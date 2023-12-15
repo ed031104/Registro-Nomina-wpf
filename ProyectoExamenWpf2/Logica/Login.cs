@@ -17,14 +17,14 @@ namespace ProyectoExamenWpf2.Logica
         }
 
 
-        public Boolean logearUsuario(String nombre) {
+        public Boolean logearUsuario(String nombre, String contraseña) {
             List<Usuarios> listaUsuario = lista.listaUsuario;
 
             for (int i = 0; i < listaUsuario.Count; i++)
             {
                 Usuarios usuario = listaUsuario[i];
 
-                if (usuario.Nombre.Equals(nombre))
+                if (usuario.Nombre.Equals(nombre) && usuario.Contraseña.Equals(contraseña))
                 {
                     MessageBox.Show("El usuario " + usuario.Nombre + " se ha logeado.");
                     // Puedes abrir el panel de menú aquí si es necesario

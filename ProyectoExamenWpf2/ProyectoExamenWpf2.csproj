@@ -72,6 +72,7 @@
     </ApplicationDefinition>
     <Compile Include="Logica\DatosEmpleado.cs" />
     <Compile Include="Logica\Empleados.cs" />
+    <Compile Include="Logica\ListaEmpleados.cs" />
     <Compile Include="Logica\ListaUsuarios.cs" />
     <Compile Include="Logica\Login.cs" />
     <Compile Include="Logica\Nomina.cs" />

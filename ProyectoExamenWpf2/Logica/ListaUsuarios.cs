@@ -40,7 +40,6 @@ namespace ProyectoExamenWpf2.Logica
             {
                 listaUsuarios.Add(usuario);
                 MessageBox.Show("El usuario '" + usuario.Contraseña + "' se ha registrado correctamente.");
-
             }
             else {
                 MessageBox.Show("El usuario ya existe, sapo triple ijue***");

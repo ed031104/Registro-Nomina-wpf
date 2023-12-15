@@ -44,10 +44,11 @@ namespace ProyectoExamenWpf2
         private void iniciarSeccionBtn_Click(object sender, RoutedEventArgs e)
         {
             String nombreUser = UsuarioTxt.Text;
+            String Contraseña = ContraseñaTxt.Password;
 
             Login loguearUser = new Login(listaUsuarios);
 
-            if (loguearUser.logearUsuario(nombreUser) == true)
+            if (loguearUser.logearUsuario(nombreUser, Contraseña) == true)
             {
                 Menu menu = new Menu();
                 this.Hide();

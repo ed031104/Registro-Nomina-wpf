@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoExamenWpf2.Logica;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +16,27 @@ using System.Windows.Shapes;
 
 namespace ProyectoExamenWpf2
 {
-    /// <summary>
-    /// Lógica de interacción para RegistroNomina.xaml
-    /// </summary>
     public partial class RegistroNomina : Page
     {
+
+        
         public RegistroNomina()
         {
             InitializeComponent();
+            
+        }
+
+        public void llenarComboBox(ListaEmpleados listaEmpleados) {
+        
+            List<Empleados> listaempleado = listaEmpleados.listaEmpleado;
+
+            for (int i = 0; i < listaempleado.Count; i++)
+            {
+                Empleados empleado = listaempleado[i];
+
+                EmpleadoCB.Items.Add(empleado);
+
+            }
         }
     }
 }
